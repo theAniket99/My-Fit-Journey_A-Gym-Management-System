@@ -1,0 +1,95 @@
+/* LandingPage.css */
+
+/* Full-screen retro-futuristic background */
+.landing-page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at center, #0d0d0d 0%, #050505 100%);
+  overflow: hidden;
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Content container with green neon glow */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(10, 10, 10, 0.65);
+  border: 2px solid rgba(0, 255, 100, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 100, 0.4), 0 0 50px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title with animated neon glow */
+.landing-title {
+  font-size: 4rem;
+  color: #00ffcc; /* Aqua neon */
+  text-transform: uppercase;
+  text-shadow: 0 0 12px #00ffcc, 0 0 25px #00ff99, 0 0 45px #00ff66;
+  margin-bottom: 20px;
+  animation: glow-pulse 2s infinite alternate;
+}
+
+/* Subtitle with softer glow */
+.landing-subtitle {
+  font-size: 1.4rem;
+  color: #ccffdd;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px rgba(0, 255, 180, 0.6);
+  line-height: 1.6;
+}
+
+/* Green glowing button */
+.landing-button {
+  font-size: 1.2rem;
+  padding: 14px 40px;
+  background: transparent;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
+}
+
+.landing-button:hover {
+  background: linear-gradient(90deg, #00ff99, #00ffff);
+  color: #0d0d0d;
+  box-shadow: 0 0 25px #00ff99, 0 0 45px #00ffff;
+  transform: scale(1.08);
+}
+
+/* Neon pulse animation */
+@keyframes glow-pulse {
+  from {
+    text-shadow: 0 0 12px #00ffcc, 0 0 25px #00ff99, 0 0 45px #00ff66;
+  }
+  to {
+    text-shadow: 0 0 20px #00ff99, 0 0 35px #00ffcc, 0 0 60px #00ffaa;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.8rem;
+  }
+  .landing-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .landing-button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
